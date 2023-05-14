@@ -1,0 +1,10 @@
+﻿{
+    "profiles": {
+      "CrudDemo2 (Package)": {
+        "commandName": "MsixPackage"
+      },
+      "CrudDemo2 (Unpackaged)": {
+        "commandName": "Project"
+      }
+    }
+}

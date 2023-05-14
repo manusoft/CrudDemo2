@@ -1,0 +1,54 @@
+﻿<Page
+    x:Class="CrudDemo2.Views.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Background="{ThemeResource SolidBackgroundFillColorBaseBrush}"
+    mc:Ignorable="d">
+
+    <Grid x:Name="ContentArea">
+        <SplitView 
+            DisplayMode="Inline"
+            IsPaneOpen="True">
+            <SplitView.Pane>
+                <Grid 
+                    Margin="5"
+                    RowSpacing="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <AutoSuggestBox
+                        PlaceholderText="Search persons"/>
+                    <ListView
+                        Grid.Row="1">
+                        <x:String>Manojbabu</x:String>
+                        <x:String>Binojbabu</x:String>
+                        <x:String>Kalaiarasan</x:String>
+                        <x:String>Madanana</x:String>
+                        <x:String>Manikandan</x:String>
+                    </ListView>
+                </Grid>
+            </SplitView.Pane>
+            <Pivot IsHeaderItemsCarouselEnabled="False">
+                <Pivot.RightHeader>
+                    <CommandBar DefaultLabelPosition="Collapsed">
+                        <AppBarButton Icon="Add"/>
+                        <AppBarButton Icon="Save"/>
+                        <AppBarButton Icon="Edit"/>
+                        <AppBarButton Icon="Delete"/>
+                        <AppBarButton Icon="Attach"/>
+                        <AppBarButton Icon="Share"/>
+                    </CommandBar>
+                </Pivot.RightHeader>
+                <PivotItem Header="View">
+                    
+                </PivotItem>
+                <PivotItem Header="Edit">
+
+                </PivotItem>
+            </Pivot>
+        </SplitView>
+    </Grid>
+</Page>
